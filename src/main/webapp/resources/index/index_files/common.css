@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+/* global */
+@import url("global.css");
+h1,h2,h3,h4,h5{font-family:microsoft yahei;}
+h4{color:#000;font-weight:bold;}
+
+section p{line-height:27px;color:#555555;}
+section a{color:#555;}
+
+.col0054c3{color:#0054c3;}
+.col0b4298{color:#0b4298;}
+.cole0c68d{color:#e0c68d;}
+.col0079ce{color:#0079ce;}
+.col666{color:#666;}
+
+.fckBody h1{font-size:1.5em;}
+.fckBody h2{font-size:1.4em;}
+.fckBody h3{font-size:1.3em;}
+.fckBody h4{font-size:1.2em;}
+.fckBody h5{font-size:1.1em;}
+.fckBody h6{font-size:1em;}
+.fckBody em{font-style:italic;}
+.fckBody h1,.fckBody h2,.fckBody h3,.fckBody h4,.fckBody h5,.fckBody h6 {margin:10px 0;font-weight:700;}
+
+.pos_r{position:relative;}
+.st{font-family:\5b8b\4f53;}
+.vam{vertical-align:middle;}
+.vat{vertical-align:top;}
+.tdu{text-decoration:underline;}
+
+.lh2{line-height:2;}
+.p_lh2 p{line-height:2;}
+.lh20{line-height:20px;}
+.p_lh20 p{line-height:20px;}
+.p_pb20 p{margin:5px 0;}
+.f15{font-size:15px;}
+
+.boxShadow{box-shadow:0 3px 6px #eaeaea;position:relative;}
+
+/* conTit */
+.conTit1{font-size:16px;color:#000;padding-bottom:20px;font-weight:bold;}
+
+/* linear */
+.linear{padding-bottom:20px;margin-bottom:20px;
+	background:url(../images/common/linear2.jpg) repeat-x left bottom;}
+
+/* ico */	
+.ico1{background:url(../images/common/ico3.jpg) no-repeat 3px 9px;padding-left:15px;}
+
+/* conTab */
+.conTab th{text-align:right;}
+.conTab th,.conTab td{color:#444444;line-height:25px;vertical-align:top;}
+	
+/* btn */
+.conBtn{width:79px;height:24px;line-height:24px;text-align:center;display:block;color:#fff;padding-right:20px;
+	background:url(../images/common/btn.jpg);}
+
+/* scroll style */
+.scrollBox{overflow:hidden;position:relative;float:left;}
+.scroll{width:99999em;position:relative;}
+.scroll li{float:left;overflow:hidden;}
+.scroll img{display:block;}
+
+.scrollBtn,.scrollBtn2{display:block;width:45px;height:89px;z-index:1;float:left;position:relative;}
+.scrollBtn{background:url(../images/common/scrollBtn.jpg) no-repeat;}
+
+.nextBtn,.nextBtn2{margin-left:20px;background-position:right 0;}
+.prevBtn,.prevBtn2{margin-right:20px;}
+
+.prevBtn.cur{background-position:left -89px;}
+.nextBtn.cur{background-position:right -89px;}
+
+.scrollBtn2{width:7px;height:13px;margin-top:30px;
+	background-image:url(../images/common/scrollBtn2.jpg);}
+.prevBtn2.cur{background-position:0 0;}
+.nextBtn2.cur{background-position:right 0;}
+
