@@ -35,7 +35,7 @@
 				<table class="table">
 					<tr id="tr_imgPath">
 						<td>image:</td>
-						<td><input type="file" name="attach" id="id_imgPath" />(Only
+						<td><input type="file" name="attach" id="id_imgPath" />1440*400px(Only
 							supports jpg png gif format )<span style="color: red">${error}</span></td>
 					</tr>
 					<tr>

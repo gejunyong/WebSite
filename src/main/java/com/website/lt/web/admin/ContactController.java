@@ -30,6 +30,6 @@ public class ContactController {
 		pu.setContent(p.getContent());
 		pageContentService.update(pu);
 		model.addAttribute("p",pu);
-		return "admin/contact/location";
+		return "redirect:location";
 	}
 }

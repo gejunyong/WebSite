@@ -18,19 +18,19 @@
 <link href="<%=request.getContextPath() %>/resources/index/index_files/common.css" type="text/css" rel="stylesheet">
 <link href="<%=request.getContextPath() %>/resources/index/index_files/index.css" type="text/css" rel="stylesheet">
 <link href="<%=request.getContextPath() %>/resources/index/index_files/global.css" type="text/css" rel="stylesheet">
-
+<link href="<%=request.getContextPath() %>/resources/index/index_files/colorbox.css" type="text/css" rel="stylesheet">
+<link href="<%=request.getContextPath() %>/resources/index/index_files/page.css" type="text/css" rel="stylesheet">
 <!--[if IE]><script src="js/lib/html5.js"></script><![endif]-->
 <!--[if lt IE 10]><script type="text/javascript" src="js/lib/PIE.js"></script><![endif]-->
 <script type="text/javascript" src="<%=request.getContextPath() %>/resources/index/index_files/jquery_002.js"></script>
+<script type="text/javascript" src="<%=request.getContextPath() %>/resources/index/index_files/jquery_003.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath() %>/resources/index/index_files/iecss3.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath() %>/resources/index/index_files/jquery.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath() %>/resources/index/index_files/clearInput.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath() %>/resources/index/index_files/bannerChange.js"></script>
-
-<title>
-
-</title><style class="firebugResetStyles" type="text/css" charset="utf-8">
+<style class="firebugResetStyles" type="text/css" charset="utf-8">
 </style>
+<decorator:head></decorator:head>
 </head>
 <body>
 	

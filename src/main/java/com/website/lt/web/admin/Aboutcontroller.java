@@ -32,7 +32,7 @@ public class Aboutcontroller {
 		pu.setContent(p.getContent());
 		pageContentService.update(pu);
 		model.addAttribute("p",pu);
-		return "admin/about/companyprofile";
+		return "redirect:companyprofile";
 	}
 	
 	
@@ -50,7 +50,7 @@ public class Aboutcontroller {
 		pu.setContent(p.getContent());
 		pageContentService.update(pu);
 		model.addAttribute("p",pu);
-		return "admin/about/ourculture";
+		return "redirect:ourculture";
 	}
 	
 	
@@ -68,6 +68,6 @@ public class Aboutcontroller {
 		pu.setContent(p.getContent());
 		pageContentService.update(pu);
 		model.addAttribute("p",pu);
-		return "admin/about/businesscustomers";
+		return "redirect:businesscustomers";
 	}
 }

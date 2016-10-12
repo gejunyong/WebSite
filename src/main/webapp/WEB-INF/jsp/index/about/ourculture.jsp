@@ -24,7 +24,7 @@
 	<ul class="list">
 		<li><a class="" href="<%=request.getContextPath() %>/index/about/companyprofile">Company Profile</a></li>
 		<li><a class="cur" href="<%=request.getContextPath() %>/index/about/ourculture">Our Culture</a></li>
-		<li><a class="" href="<%=request.getContextPath() %>/index/about/certitication">Certification</a></li>
+		<li><a class="" href="<%=request.getContextPath() %>/index/about/certification">Certification</a></li>
 		<li><a class="" href="<%=request.getContextPath() %>/index/about/businesscustomers">Business Customers</a></li>
 		<li><a class="" href="<%=request.getContextPath() %>/index/about/facility">Facility</a></li>
 	</ul>

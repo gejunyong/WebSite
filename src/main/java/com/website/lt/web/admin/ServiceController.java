@@ -30,7 +30,7 @@ public class ServiceController {
 		pu.setContent(p.getContent());
 		pageContentService.update(pu);
 		model.addAttribute("p",pu);
-		return "admin/service/salesmap";
+		return "redirect:salesmap";
 	}
 	
 	// pagecontent load data
@@ -48,6 +48,6 @@ public class ServiceController {
 		pu.setContent(p.getContent());
 		pageContentService.update(pu);
 		model.addAttribute("p",pu);
-		return "admin/service/serviceteam";
+		return "redirect:serviceteam";
 	}
 }

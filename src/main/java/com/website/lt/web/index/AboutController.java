@@ -6,6 +6,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.website.lt.model.PageContent;
+import com.website.lt.service.ICertificationService;
+import com.website.lt.service.IFacilityService;
 import com.website.lt.service.IPageContentService;
 
 @Controller
@@ -14,7 +16,10 @@ public class AboutController {
 
 	@Autowired
 	private IPageContentService pageContentService;
-	
+	@Autowired
+	private ICertificationService certificationService;
+	@Autowired
+	private IFacilityService facilityService;
 	
 	//three pagecontent load data
 	@RequestMapping("/companyprofile")
@@ -37,5 +42,20 @@ public class AboutController {
 		model.addAttribute("p",pageContentService.load(3));
 		return "index/about/businesscustomers";
 	}
+	
+	@RequestMapping("/facility")
+	public String facility(Model model){
+		//about load datas
+		model.addAttribute("p",facilityService.getList());
+		return "index/about/facility";
+	}
+	
+	@RequestMapping("/certification")
+	public String certification(Model model){
+		//about load datas
+		model.addAttribute("p",certificationService.getList());
+		return "index/about/certification";
+	}
+	
 	
 }

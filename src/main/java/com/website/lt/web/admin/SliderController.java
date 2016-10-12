@@ -86,7 +86,7 @@ public class SliderController {
 			model.addAttribute("error","image is null!");
 		}
 		sliderService.addSlider(slider);
-		return "/admin/slider/list";
+		return "redirect:list";
 		
 	}
 	
@@ -129,7 +129,7 @@ public class SliderController {
 				    slider.setImgPath(newPath);
 		}
 		sliderService.updateSlider(slider);
-		return "/admin/slider/list";
+		return "redirect:/admin/slider/list";
 	}
 	
 	//slider delete 

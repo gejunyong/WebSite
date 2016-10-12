@@ -297,7 +297,7 @@
 							</li>
 							
 							<li class="">
-								<a href="<%=request.getContextPath() %>/admin/about/certification">
+								<a href="<%=request.getContextPath() %>/admin/about/certification/list">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Certification
 								</a>
@@ -313,7 +313,7 @@
 							</li>
 							
 							<li class="">
-								<a href="<%=request.getContextPath() %>/admin/about/facility">
+								<a href="<%=request.getContextPath() %>/admin/about/facility/list">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Facility
 								</a>
