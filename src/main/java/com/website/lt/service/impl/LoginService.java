@@ -15,5 +15,10 @@ public class LoginService implements ILoginService{
 	public User loadUser(String userName){
 		return userDao.loadUser(userName);
 	}
+
+	@Override
+	public void update(User u) {
+		userDao.update(u);
+	}
 	
 }

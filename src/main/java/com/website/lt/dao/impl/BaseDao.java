@@ -94,7 +94,7 @@ public class BaseDao<T> extends HibernateDaoSupport implements IBaseDao<T> {
 		int pageSize = SystemContext.getSize();
 		int pageOffset = SystemContext.getOffset();
 		if(pageSize<=0) pageSize = 10;
-		if(pageOffset<0) pageOffset = 0;
+		if(pageOffset<0) pageOffset = 1;
 		Query q = setParamterQuery(hql, args);
 		q.setFirstResult((pageOffset-1)*pageSize).setMaxResults(pageSize);
 		String cHql = getCountHql(hql);

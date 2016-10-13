@@ -4,7 +4,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <nav>
 <ul class="pagination">
-<pg:pager maxPageItems="12" items="${param.items }" export="curPage=pageNumber" url="${param.url }">
+<pg:pager maxPageItems="10" items="${param.items }" export="curPage=pageNumber" url="${param.url }">
 <c:forEach items="${param.params }" var="p">
 	<pg:param name="${p }"/>
 </c:forEach>
@@ -15,25 +15,25 @@
 当前第${curPage }页
 -->
 <pg:first>
-	<li><a href="${pageUrl }">首页</a></li>
+	<a href="${pageUrl }"><img src="<%=request.getContextPath() %>/resources/index/index_files/First.gif" style="margin-right:5px;" border="0"/></a>
 </pg:first>
 <pg:prev>
-	<li><a href="${pageUrl }">上一页</a></li>
+	<a href="${pageUrl }"><img src="<%=request.getContextPath() %>/resources/index/index_files/Prev.gif" style="margin-right:5px;" border="0"/></a>
 </pg:prev>
 <pg:pages>
 
 <c:if test="${curPage eq pageNumber }">
-<li class="active"><a href="###">${pageNumber } <span class="sr-only">(current)</span></a></li>
+<a class="cur" disabled="disabled" style="margin-right:5px;">${pageNumber } </a>
 </c:if>
 <c:if test="${curPage ne pageNumber }">
-	<li><a href="${pageUrl }">${pageNumber }</a></li>
+<a href="${pageUrl }" style="margin-right:5px;">${pageNumber }</a>
 </c:if>
 </pg:pages>
 <pg:next>
-	<li><a href="${pageUrl }">下一页</a></li>
+	<a href="${pageUrl }"><img src="<%=request.getContextPath() %>/resources/index/index_files/Next.gif" border="0"/></a>
 </pg:next>
 <pg:last>
-	<li><a href="${pageUrl }">尾页</a></li>
+	<a href="${pageUrl }"><img src="<%=request.getContextPath() %>/resources/index/index_files/Last.gif" border="0"/></a>
 </pg:last>
 </pg:pager>
 </ul>

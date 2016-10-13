@@ -371,7 +371,7 @@
 
 						<ul class="submenu">
 							<li class="">
-								<a href="<%=request.getContextPath() %>/admin/news/companynews">
+								<a href="<%=request.getContextPath() %>/admin/news/companynews/list">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Company News
 								</a>
@@ -455,7 +455,7 @@
 						
 						<ul class="submenu">
 							<li class="">
-								<a href="<%=request.getContextPath() %>/admin/account/changepassword">
+								<a href="<%=request.getContextPath() %>/admin/account/changepwd">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Change Password
 								</a>

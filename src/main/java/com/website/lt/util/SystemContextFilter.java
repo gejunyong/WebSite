@@ -27,6 +27,13 @@ public class SystemContextFilter implements Filter {
 			offset = Integer.parseInt(req.getParameter("page"));
 		} catch (NumberFormatException e) {
 		}
+		//展示页面分页参数不同
+		if(offset==0){
+			try {
+				offset = Integer.parseInt(req.getParameter("pager.offset"))/10+1;
+			} catch (NumberFormatException e) {
+			}
+		}
 		try {
 			SystemContext.setOffset(offset);
 			SystemContext.setSize(10);
