@@ -249,14 +249,14 @@
 						<b class="arrow"></b>
 						<ul class="submenu">
 							<li class="">
-								<a href="<%=request.getContextPath() %>/admin/slider/productscategory">
+								<a href="<%=request.getContextPath() %>/admin/products/category/list">
 									<i class="menu-icon fa fa-caret-right"></i>
 									products Category
 								</a>
 								<b class="arrow"></b>
 							</li>
 							<li class="">
-								<a href="<%=request.getContextPath() %>/admin/slider/productsmanage">
+								<a href="<%=request.getContextPath() %>/admin/products/products/list">
 									<i class="menu-icon fa fa-caret-right"></i>
 									products Manage
 								</a>
