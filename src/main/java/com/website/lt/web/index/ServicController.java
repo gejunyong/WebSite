@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.website.lt.service.ICategoryService;
 import com.website.lt.service.IPageContentService;
 
 @Controller
@@ -13,6 +14,8 @@ public class ServicController {
 	
 	@Autowired
 	private IPageContentService pageContentService;
+	@Autowired
+	private ICategoryService categoryService;
 	
 	
 	//two pagecontent load data
@@ -20,6 +23,7 @@ public class ServicController {
 	public String salesmap(Model model){
 		//about load datas
 		model.addAttribute("p",pageContentService.load(4));
+		model.addAttribute("categorys",categoryService.list(2));
 		return "index/service/salesmap";
 	}
 	
@@ -27,6 +31,7 @@ public class ServicController {
 	public String ourculture(Model model){
 		//about load datas
 		model.addAttribute("p",pageContentService.load(5));
+		model.addAttribute("categorys",categoryService.list(2));
 		return "index/service/serviceteam";
 	}
 	

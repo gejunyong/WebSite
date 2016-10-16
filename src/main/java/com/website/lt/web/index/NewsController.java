@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.website.lt.model.News;
 import com.website.lt.model.Pager;
+import com.website.lt.service.ICategoryService;
 import com.website.lt.service.INewsService;
 
 @Controller
@@ -17,6 +18,8 @@ public class NewsController {
 	
 	@Autowired
 	private INewsService newsService;
+	@Autowired
+	private ICategoryService categoryService;
 
 	//three pagecontent load data
 	@RequestMapping("/companynews")
@@ -24,6 +27,7 @@ public class NewsController {
 		//about load datas
 		Pager<News> p=newsService.find();
 		model.addAttribute("pagers",newsService.find());
+		model.addAttribute("categorys",categoryService.list(2));
 		return "index/news/companynews";
 	}
 	
@@ -32,6 +36,7 @@ public class NewsController {
 	public String detail(@PathVariable int id,Model model){
 		//about load datas
 		model.addAttribute("p",newsService.load(id));
+		model.addAttribute("categorys",categoryService.list(2));
 		return "index/news/detail";
 	}
 }

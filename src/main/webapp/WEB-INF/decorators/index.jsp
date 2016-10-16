@@ -31,6 +31,36 @@
 <style class="firebugResetStyles" type="text/css" charset="utf-8">
 </style>
 <decorator:head></decorator:head>
+<script type="text/javascript">
+//设置cookie
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires+";path=/";
+}
+//获取cookie
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) != -1) return c.substring(name.length, c.length);
+    }
+    return "";
+}
+//清除cookie  
+function clearCookie(name) {  
+    setCookie(name, "", -1);  
+}  
+
+function setMarket(){
+    var ltmarket = getCookie("ltmarket");
+	var ca = ltmarket.split(',');
+	$('#basketCount').text(ca.length-1);
+}
+</script>
 </head>
 <body>
 	
@@ -61,7 +91,7 @@
             if (key == "SEARCH" || key == "")
                 alert("Please select the keywords。")
             else
-                location.href = "/en/other/search.aspx?keys=" + key;
+                location.href = "<%=request.getContextPath() %>/index/products/search?key=" + key;
 
         })
     })
@@ -99,12 +129,11 @@
 						<dd><a href="<%=request.getContextPath() %>/index/about/facility" class="copy">Facility</a></dd>
 					</dl>
 				</li>									
-				<li><a class="<%=request.getContextPath() %>/index/products/" href="">Products</a>
+				<li><a class="copy" href="<%=request.getContextPath() %>/index/products/categorys">Products</a>
 					<dl class="sdList clearfix">
-					<dd><a class="copy" href="">New Products</a></dd>
-						
-        	      <dd><a class="copy" href="">Nebulizer</a>
-        	      </dd>
+							<c:forEach items="${categorys }" var="c">
+							 	<dd><a class="copy" href="<%=request.getContextPath() %>/index/products/categorys/${c.id }">${c.name }</a></dd>
+							</c:forEach>
 					</dl>
 				</li>						
 				<li><a class="" href="<%=request.getContextPath() %>/index/service/salesmap">Service</a>
@@ -129,7 +158,8 @@
 		</nav>
 		<div class="toolBox fl">
 			<div class="languageBox" href="#" style="width:233px;">
-				<span style="font-size:small;"><a href="http://www.baidu.com" style="color:blue;"><b>Inquiry Basket(0)</b></a></span>
+				<span style="font-size:small;"><a href="<%=request.getContextPath() %>/index/contact/feedback" style="color:blue;">
+				<b>Inquiry Basket(&nbsp;<span id="basketCount"> </span>&nbsp;)</b></a></span>
 			</div>				
 			<div class="searchBox clearInput">
 				<a href="javascript:void()" class="searchBtn searchAll"></a>
@@ -167,9 +197,10 @@
 				</td>
 				<td>						
 					<ul class="footerList">
-						<li><h3><a href="<%=request.getContextPath() %>/index/products">Products</a></h3></li>
-								  <li><a href="#">Nebulizer</a></li>
-								  <li><a href="#">Digital Blood Pressure Monitor </a></li>
+						<li><h3><a href="<%=request.getContextPath() %>/index/products/categorys">Products</a></h3></li>
+							<c:forEach items="${categorys }" var="c">
+							 	<li><a href="<%=request.getContextPath() %>/index/products/categorys/${c.id }">${c.name }</a></li>
+							</c:forEach>
 					</ul>
 				</td>
 				<td>						
@@ -197,4 +228,7 @@ Ningbo,<br> China, P.C.315000</a></h3>
 		</div>
 	</div>	
 </footer>
+<script type="text/javascript">
+setMarket();
+</script>
 </body></html>

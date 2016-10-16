@@ -4,26 +4,31 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Company Profile</title>
+<title>feedback</title>
 </head>
 <body>
 		<section>
 		<div class="cw">
-			<img src="<%=request.getContextPath() %>/resources/index/index_files/service.jpg" class="banner pt15" height="80" width="980">
+			<img src="<%=request.getContextPath() %>/resources/index/index_files/contact.jpg" class="banner pt15" height="80" width="980">
 			<div class="clearfix main">
 			
-				<div class="content fr p_pb20 pt20">
-				${p.content }
+						<div class="content fr pt40">
+					
+					<div class="onlineBody clearInput">
+						<h6 class="col666 pb10 mb5 f14">Inquiry success</h6>
+						<img alt="success" src="<%=request.getContextPath() %>/resources/index/index_files/success.png">
+
+					</div>
+					
 				</div>
-				
 				<!-- sidebar -->
 				
 
 <div class="sidebar fl">
-	<h3>Service</h3>
+	<h3>Contact us</h3>
 	<ul class="list">
-		<li><a class="cur" href="<%=request.getContextPath() %>/index/service/salesmap">Sales Map</a></li>
-		<li><a class="" href="<%=request.getContextPath() %>/index/about/ourculture">Service Team</a></li>
+		<li><a class="" href="<%=request.getContextPath() %>/index/contact/location">Location</a></li>
+		<li><a class="cur" href="<%=request.getContextPath() %>/index/contact/feedback">Online Feedback</a></li>
 	</ul>
 	
 	
@@ -56,5 +61,8 @@
 			</div>
 		</div>		
 	</section>
+	<script type="text/javascript">
+	clearCookie("ltmarket");
+	</script>
 </body>
 </html>

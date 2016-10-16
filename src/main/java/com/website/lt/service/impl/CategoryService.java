@@ -52,11 +52,19 @@ public class CategoryService implements ICategoryService {
 	public List<Category> list(int leaf) {
 		if(leaf==0){
 			return categoryDao.list(" from Category where pId<=1 order by sortId");
-		}else{
+		}else if(leaf==1){
 			return categoryDao.list(" from Category where pId>1 order by sortId");
+		}else if(leaf==2){
+			return categoryDao.list(" from Category where pId=1 order by sortId");
+		}else{
+			return null;
 		}
 	}
-
+	
+	@Override
+	public List<Category> cList(int pid){
+			return categoryDao.list(" from Category where pId=? order by sortId",pid);
+	}
 
 
 }

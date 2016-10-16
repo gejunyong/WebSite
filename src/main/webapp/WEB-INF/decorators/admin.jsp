@@ -424,16 +424,9 @@
 						
 						<ul class="submenu">
 							<li class="">
-								<a href="<%=request.getContextPath() %>/admin/feedback/inquiry">
+								<a href="<%=request.getContextPath() %>/admin/contact/feedback">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Inquiry
-								</a>
-								<b class="arrow"></b>
-							</li>
-							<li class="">
-								<a href="<%=request.getContextPath() %>/admin/feedback/onlinefeedback">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Online Feedback
 								</a>
 								<b class="arrow"></b>
 							</li>

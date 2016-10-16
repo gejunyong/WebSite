@@ -136,7 +136,7 @@
 							style="margin-left: 300px"
 							href="<%=request.getContextPath()%>/admin/products/products/list">Cancel</a>
 							<input class="btn btn-primary" style="margin-left: 80px"
-							type="submit" value="Add" />&nbsp;&nbsp;<span style="color: red">${nodeerror}</span></td>
+							type="submit" value="Update" />&nbsp;&nbsp;<span style="color: red">${nodeerror}</span></td>
 					</tr>
 				</table>
 			</sf:form>

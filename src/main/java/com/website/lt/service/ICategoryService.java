@@ -15,5 +15,6 @@ public interface ICategoryService {
 	public Pager<Category> find();
 	public List<Category> list();
 	public List<Category> list(int leaf);
+	public List<Category> cList(int pid);
 
 }

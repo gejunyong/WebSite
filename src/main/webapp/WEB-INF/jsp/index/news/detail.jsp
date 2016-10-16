@@ -47,7 +47,7 @@
             if (key == "SEARCH" || key == "")
                 alert("Please select the keywords。")
             else
-                location.href = "/en/product/search.aspx?keyp=" + key;
+            	 location.href = "<%=request.getContextPath() %>/index/products/search?key=" + key;
 
         })
     })
