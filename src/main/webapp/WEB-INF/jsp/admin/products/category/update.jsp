@@ -122,7 +122,7 @@
 													<td>Name:</td>
 														<td><sf:input path="name"  /></td>
 													</tr>
-													<tr><td>oldImage:</td><td><img width="330px" height="126px" src="<%=request.getContextPath()%>/${t.imgPath }"></td></tr>
+													<tr><td>oldImage:</td><td><img width="330px" height="126px" src="<%=request.getContextPath()%>${t.imgPath }"></td></tr>
 													<tr id="tr_imgPath">
 														<td>image:</td>
 														<td><input type="file" name="attach" id="id_imgPath" />(Only

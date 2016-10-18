@@ -83,6 +83,16 @@
 														<i class="ace-icon fa fa-lock"></i>
 												</span>
 												</label>
+												
+												
+												<label class="block clearfix"> 
+												<input type="text" class="form-control" name="code" id="index_code"   placeholder="rand code"  />
+												<span class="block input-icon input-icon-right"> 
+												<img id="imgObj" alt="验证码" src="code.html" />
+												<a href="#" onclick="changeImg()">换一张</a>
+												</span>
+												</label>
+												
 
 												<div class="space"></div>
 
@@ -192,17 +202,40 @@
 			  $('#btn_submit').on('click',function(){
 				  var userName=$('#userName').val();
 				  var password=$('#password').val();
+				  var code=$('#index_code').val();
 				  if(userName.trim()==''){
-					  alert('用户名 不能为空！');
+					  alert('username can not null！');
 					  return;
 				  }
 				  if(password==''){
-					  alert('密 码 不能为空！');
+					  alert('password can not null！');
+					  return;
+				  }
+				  if(code==''){
+					  alert('code can not null！');
 					  return;
 				  }
 				  $('#form1').submit();
 			  });
 			});
-	</script>
+
+	function changeImg() {
+		var imgSrc = $("#imgObj");
+		var src = imgSrc.attr("src");
+		imgSrc.attr("src", chgUrl(src));
+	}
+	//时间戳   
+	//为了使每次生成图片不一致，即不让浏览器读缓存，所以需要加上时间戳   
+	function chgUrl(url) {
+		var timestamp = (new Date()).valueOf();
+		url = url.substring(0, 17);
+		if ((url.indexOf("&") >= 0)) {
+			url = url + "×tamp=" + timestamp;
+		} else {
+			url = url + "?timestamp=" + timestamp;
+		}
+		return url;
+	}
+</script>
 </body>
 </html>

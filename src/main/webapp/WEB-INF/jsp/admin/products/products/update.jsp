@@ -118,7 +118,7 @@
 					</tr>
 					<tr id="tr_imgPath">
 						<td>old image:</td>
-						<td><img alt="img" src="<%=request.getContextPath()%>/${t.imgPath }"></td>
+						<td><img alt="img" src="<%=request.getContextPath()%>${t.imgPath }"></td>
 					</tr>
 					<tr id="tr_imgPath">
 						<td>image:</td>

@@ -26,8 +26,12 @@ public class LoginController {
 	
 	//login
 	@RequestMapping(value="login",method=RequestMethod.POST)
-	public String login(String userName,String password,Model model){
+	public String login(String userName,String password,String code,Model model,HttpSession session){
 		//System.out.println("pwd:"+WebTools.encryptBasedDes(password));
+		if(!code.toUpperCase().equals(session.getAttribute("code"))){
+			model.addAttribute("error","rand code is error!");
+			return "login/login";
+		}
 		
 		//account not exsit
 		User u=loginService.loadUser(userName);

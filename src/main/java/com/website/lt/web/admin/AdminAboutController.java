@@ -12,7 +12,7 @@ import com.website.lt.service.IPageContentService;
 
 @Controller
 @RequestMapping("/admin/about")
-public class AboutController {
+public class AdminAboutController {
 	
 	@Autowired
 	private IPageContentService pageContentService;

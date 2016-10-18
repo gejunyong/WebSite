@@ -11,10 +11,9 @@
 <body>
 	<section>
 	<div class="bannerBox">
-
-		<c:forEach items="${sliders}" var="s">
+		<c:forEach items="${sliders}" var="s">z
 			<a href="${s.imgUrl }" target="_blank" class="banner"
-			style="background-image: url(<%=request.getContextPath() %>${s.imgPath }); display: none;">
+			style="background-image: url(<%=request.getContextPath() %>${s.imgPath });">
 			</a>
 		</c:forEach>
 	</div>

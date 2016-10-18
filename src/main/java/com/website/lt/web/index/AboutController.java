@@ -5,7 +5,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.website.lt.model.PageContent;
 import com.website.lt.service.ICategoryService;
 import com.website.lt.service.ICertificationService;
 import com.website.lt.service.IFacilityService;
